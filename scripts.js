@@ -53,4 +53,10 @@ function readLibrary() {
 // TESTS
 addBookToLibrary("Lucas", "Azevedo", "23", "yes");
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
 readLibrary();
