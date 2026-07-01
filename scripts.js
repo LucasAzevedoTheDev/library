@@ -20,10 +20,12 @@ function addBookToLibrary(...parameters) {
 
 function readLibrary() {
   theLibrary.forEach((book) => {
-    console.log("It works!");
+    console.log("It works!");   //ADD REAL FUNCTIONALITY
   });
   // Set up basic HTML to see if it get easier☠️
 }
+
+const containerDiv = document.querySelector(".container");
 
 
 

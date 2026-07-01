@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 155vh;
+  height: 70vh;
+  background-color: blue; 
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+}
