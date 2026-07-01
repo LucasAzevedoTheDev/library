@@ -18,3 +18,15 @@ function addBookToLibrary(...parameters) {
   theLibrary.push(book);
 }
 
+function readLibrary() {
+  theLibrary.forEach((book) => {
+    console.log("It works!");
+  });
+}
+
+
+
+
+// TESTS
+addBookToLibrary("Lucas", "Azevedo", "23", "yes");
+readLibrary();
