@@ -49,6 +49,19 @@ function readLibrary() {
   });
 }
 
+const modal = document.querySelector(".modal");
+const newButton = document.querySelector(".new-button");
+const closeButton = document.querySelector(".close-button");
+
+newButton.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+  modal.close();
+});
+
+
 
 // TESTS
 addBookToLibrary("Lucas", "Azevedo", "23", "yes");

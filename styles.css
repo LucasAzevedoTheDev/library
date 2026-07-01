@@ -32,3 +32,10 @@
 h2, p {
   color: white;
 }
+
+dialog {
+  margin: auto;
+  width: 45%;
+  height: 45%;
+  padding: 10px;
+}
