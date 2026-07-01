@@ -20,14 +20,18 @@ function addBookToLibrary(...parameters) {
 
 function readLibrary() {
   theLibrary.forEach((book) => {
-    console.log("It works!");   //ADD REAL FUNCTIONALITY
+      //display card
+      containerDiv.appendChild(card);
   });
   // Set up basic HTML to see if it get easier☠️
 }
 
 const containerDiv = document.querySelector(".container");
-
-
+const card = document.querySelector(".card");
+const bookTitle = document.querySelector(".book-title");
+const author = document.querySelector(".author");
+const pages = document.querySelector(".pages");
+const read = document.querySelector(".read");
 
 
 // TESTS
