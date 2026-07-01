@@ -1,3 +1,5 @@
+const containerDiv = document.querySelector(".container");
+
 const theLibrary = [];
 
 function Book(name, author, pages, read) {
@@ -21,19 +23,34 @@ function addBookToLibrary(...parameters) {
 function readLibrary() {
   theLibrary.forEach((book) => {
       //display card
+      const card = document.createElement("div");
+      const bookTitle = document.createElement("h2");
+      const author = document.createElement("p");
+      const pages = document.createElement("p");
+      const read = document.createElement("p");
+
+      card.classList.add("card");
+      bookTitle.classList.add("book-title");
+      author.classList.add("author");
+      pages.classList.add("pages");
+      read.classList.add("read");
+
+      card.appendChild(bookTitle)
+      card.appendChild(author)
+      card.appendChild(pages)
+      card.appendChild(read)
+
+      bookTitle.textContent = book.name;
+      author.textContent = book.author;
+      pages.textContent = book.pages;
+      read.textContent = book.read;
+
       containerDiv.appendChild(card);
   });
-  // Set up basic HTML to see if it get easier☠️
 }
-
-const containerDiv = document.querySelector(".container");
-const card = document.querySelector(".card");
-const bookTitle = document.querySelector(".book-title");
-const author = document.querySelector(".author");
-const pages = document.querySelector(".pages");
-const read = document.querySelector(".read");
 
 
 // TESTS
 addBookToLibrary("Lucas", "Azevedo", "23", "yes");
+addBookToLibrary("Manuely", "Fogaça", "23", "yes");
 readLibrary();
