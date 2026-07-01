@@ -22,6 +22,7 @@ function readLibrary() {
   theLibrary.forEach((book) => {
     console.log("It works!");
   });
+  // Set up basic HTML to see if it get easier☠️
 }
 
 
