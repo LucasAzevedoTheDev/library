@@ -30,17 +30,20 @@ function readLibrary() {
       const author = document.createElement("p");
       const pages = document.createElement("p");
       const read = document.createElement("p");
+      const deleteButton = document.createElement("button");
 
       card.classList.add("card");
       bookTitle.classList.add("book-title");
       author.classList.add("author");
       pages.classList.add("pages");
       read.classList.add("read");
+      deleteButton.classList.add("delete-button");
 
-      card.appendChild(bookTitle)
-      card.appendChild(author)
-      card.appendChild(pages)
-      card.appendChild(read)
+      card.appendChild(bookTitle);
+      card.appendChild(author);
+      card.appendChild(pages);
+      card.appendChild(read);
+      card.appendChild(deleteButton);
 
       bookTitle.textContent = book.name;
       author.textContent = book.author;
@@ -48,6 +51,10 @@ function readLibrary() {
       read.textContent = book.read;
 
       containerDiv.appendChild(card);
+
+      deleteButton.addEventListener("click", () => {
+        card.remove();
+      });
   });
 }
 
@@ -88,9 +95,9 @@ submitButton.addEventListener("click", () => {
 // TESTS
 addBookToLibrary("Lucas", "Azevedo", "23", "yes");
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+addBookToLibrary("Manuel", "Fogaça", "23", "yes");
+addBookToLibrary("Manu", "Fogaça", "23", "yes");
+addBookToLibrary("Mano", "Fogaça", "23", "yes");
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
