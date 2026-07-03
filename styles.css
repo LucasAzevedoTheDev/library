@@ -4,10 +4,15 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(163, 130, 108);
+  padding: 30px;
+}
+
 .container {
   width: 180vh;
   height: 80vh;
-  background-color: blue; 
+  background-color: rgb(78, 49, 29);
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -22,7 +27,7 @@
   width: 90%;
   max-width: 227px;
   height: 95%;
-  background-color: black;
+  background-color: rgb(118, 110, 105);
   margin: auto;
   display: flex;
   flex-direction: column;
