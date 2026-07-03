@@ -61,15 +61,42 @@ closeButton.addEventListener("click", () => {
   modal.close();
 });
 
+/////////////////////////////////////
+const submitButton = document.querySelector(".submit");
+
+submitButton.addEventListener("click", () => {
+  let currentName = document.querySelector("#name-input").value;
+  let currentAuthor = document.querySelector("#author-input").value;
+  let currentPages = document.querySelector("#pages-input").value;
+  let currentRead = document.querySelector("#read-input").value;
+
+  addBookToLibrary(currentName, currentAuthor, currentPages, currentRead);
+  readLibrary();
+
+  currentName = "";
+  currentAuthor = "";
+  currentPages = "";
+  currentRead = "";
+  
+  card.textContent = "";
+  bookTitle.textContent = "";
+  author.textContent = "";
+  pages.textContent = "";
+  read.textContent = "";
+})
+/////////////////////////////////////
 
 
-// TESTS
-addBookToLibrary("Lucas", "Azevedo", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-addBookToLibrary("Manuely", "Fogaça", "23", "yes");
-readLibrary();
+// FIX BUGS AND FIGURE OUT
+
+
+// // TESTS
+// addBookToLibrary("Lucas", "Azevedo", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// addBookToLibrary("Manuely", "Fogaça", "23", "yes");
+// readLibrary();
