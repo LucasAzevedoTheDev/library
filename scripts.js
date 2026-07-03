@@ -21,6 +21,8 @@ function addBookToLibrary(...parameters) {
 }
 
 function readLibrary() {
+  containerDiv.replaceChildren();
+  
   theLibrary.forEach((book) => {
       //display card
       const card = document.createElement("div");
@@ -82,8 +84,6 @@ submitButton.addEventListener("click", () => {
 })
 /////////////////////////////////////
 
-
-// FIX BUGS AND FIGURE OUT
 
 
 // // TESTS
