@@ -87,9 +87,8 @@ submitButton.addEventListener("click", () => {
     let currentName = document.querySelector("#name-input").value;
     let currentAuthor = document.querySelector("#author-input").value;
     let currentPages = document.querySelector("#pages-input").value;
-    let currentRead = document.querySelector("#read-input").checked;
 
-    addBookToLibrary(currentName, currentAuthor, currentPages, currentRead);
+    addBookToLibrary(currentName, currentAuthor, currentPages);
     readLibrary();
     form.reset();
   }
