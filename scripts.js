@@ -22,7 +22,7 @@ function addBookToLibrary(...parameters) {
 
 function readLibrary() {
   containerDiv.replaceChildren();
-  
+
   theLibrary.forEach((book) => {
       //display card
       const card = document.createElement("div");
@@ -64,9 +64,7 @@ closeButton.addEventListener("click", () => {
   form.reset();
 });
 
-/////////////////////////////////////
 const submitButton = document.querySelector(".submit");
-
 submitButton.addEventListener("click", () => {
   let currentName = document.querySelector("#name-input").value;
   let currentAuthor = document.querySelector("#author-input").value;
@@ -75,14 +73,8 @@ submitButton.addEventListener("click", () => {
 
   addBookToLibrary(currentName, currentAuthor, currentPages, currentRead);
   readLibrary();
-
   form.reset();
-  currentName = "";
-  currentAuthor = "";
-  currentPages = "";
-  currentRead = "";
 })
-/////////////////////////////////////
 
 
 
