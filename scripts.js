@@ -29,6 +29,7 @@ function readLibrary() {
       const bookTitle = document.createElement("h2");
       const author = document.createElement("p");
       const pages = document.createElement("p");
+      const checkboxLabel = document.createElement("label");
       const read = document.createElement("input");
       const deleteButton = document.createElement("button");
 
@@ -36,22 +37,24 @@ function readLibrary() {
       bookTitle.classList.add("book-title");
       author.classList.add("author");
       pages.classList.add("pages");
+      checkboxLabel.htmlFor = book.id;
       read.classList.add("read");
       read.type = "checkbox";
+      read.id = book.id;
       read.checked = book.read;
       deleteButton.classList.add("delete-button");
 
       card.appendChild(bookTitle);
       card.appendChild(author);
       card.appendChild(pages);
+      card.appendChild(checkboxLabel);
       card.appendChild(read);
       card.appendChild(deleteButton);
 
       bookTitle.textContent = book.name;
       author.textContent = book.author;
-      pages.textContent = book.pages;
-      read.textContent = book.read;
-
+      pages.textContent = book.pages + " Pages";
+      checkboxLabel.textContent = "read it?";
       containerDiv.appendChild(card);
 
       deleteButton.addEventListener("click", () => {

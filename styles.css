@@ -30,7 +30,7 @@
   justify-content: space-around;
 }
 
-h2, p {
+h2, p, label {
   color: white;
 }
 
