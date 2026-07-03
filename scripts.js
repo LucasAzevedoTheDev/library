@@ -29,7 +29,7 @@ function readLibrary() {
       const bookTitle = document.createElement("h2");
       const author = document.createElement("p");
       const pages = document.createElement("p");
-      const read = document.createElement("p");
+      const read = document.createElement("input");
       const deleteButton = document.createElement("button");
 
       card.classList.add("card");
@@ -37,6 +37,8 @@ function readLibrary() {
       author.classList.add("author");
       pages.classList.add("pages");
       read.classList.add("read");
+      read.type = "checkbox";
+      read.checked = book.read;
       deleteButton.classList.add("delete-button");
 
       card.appendChild(bookTitle);
@@ -54,6 +56,10 @@ function readLibrary() {
 
       deleteButton.addEventListener("click", () => {
         card.remove();
+      });
+
+      read.addEventListener("click", () => {
+        book.toggleRead();
       });
   });
 }
@@ -78,7 +84,7 @@ submitButton.addEventListener("click", () => {
     let currentName = document.querySelector("#name-input").value;
     let currentAuthor = document.querySelector("#author-input").value;
     let currentPages = document.querySelector("#pages-input").value;
-    let currentRead = document.querySelector("#read-input").value;
+    let currentRead = document.querySelector("#read-input").checked;
 
     addBookToLibrary(currentName, currentAuthor, currentPages, currentRead);
     readLibrary();
@@ -90,12 +96,20 @@ submitButton.addEventListener("click", () => {
   }
 })
 
+Book.prototype.toggleRead = function() {
+  if(this.read === true) {
+    this.read = false;
+  }
 
+  else {
+    this.read = true;
+  }
+}
 
 // TESTS
-addBookToLibrary("Lucas", "Azevedo", "23", "yes");
+addBookToLibrary("Lucas", "Azevedo", "23", false);
 addBookToLibrary("Manuely", "Fogaça", "23", "yes");
 addBookToLibrary("Manuel", "Fogaça", "23", "yes");
-addBookToLibrary("Manu", "Fogaça", "23", "yes");
+addBookToLibrary("Manu", "Fogaça", "23", false);
 addBookToLibrary("Mano", "Fogaça", "23", "yes");
  readLibrary();
