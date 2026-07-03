@@ -54,7 +54,7 @@ function readLibrary() {
       bookTitle.textContent = book.name;
       author.textContent = book.author;
       pages.textContent = book.pages + " Pages";
-      checkboxLabel.textContent = "read it?";
+      checkboxLabel.textContent = "Read";
       containerDiv.appendChild(card);
 
       deleteButton.addEventListener("click", () => {
