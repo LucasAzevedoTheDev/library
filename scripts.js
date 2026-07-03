@@ -1,5 +1,5 @@
 const containerDiv = document.querySelector(".container");
-
+const form = document.querySelector(".form");
 const theLibrary = [];
 
 function Book(name, author, pages, read) {
@@ -59,6 +59,7 @@ newButton.addEventListener("click", () => {
 
 closeButton.addEventListener("click", () => {
   modal.close();
+  form.reset();
 });
 
 /////////////////////////////////////
@@ -73,16 +74,11 @@ submitButton.addEventListener("click", () => {
   addBookToLibrary(currentName, currentAuthor, currentPages, currentRead);
   readLibrary();
 
+  form.reset();
   currentName = "";
   currentAuthor = "";
   currentPages = "";
   currentRead = "";
-  
-  card.textContent = "";
-  bookTitle.textContent = "";
-  author.textContent = "";
-  pages.textContent = "";
-  read.textContent = "";
 })
 /////////////////////////////////////
 
