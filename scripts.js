@@ -135,15 +135,7 @@ Book.prototype.toggleRead = function() {
   else {
     this.read = true;
   }
-}
-
-// TESTS
-addBookToLibrary("Lucas", "Azevedo", "23", false);
-addBookToLibrary("Manuely", "Fogaça", "23", false);
-addBookToLibrary("Manuel", "Fogaça", "23", false);
-addBookToLibrary("Manu", "Fogaça", "23", false);
-addBookToLibrary("Mano", "Fogaça", "23", false);
- readLibrary();
+};
 
 
 
