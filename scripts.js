@@ -24,32 +24,42 @@ function readLibrary() {
   containerDiv.replaceChildren();
 
   theLibrary.forEach((book) => {
-      //display card
+      // display card
       const card = document.createElement("div");
-      const bookTitle = document.createElement("h2");
-      const author = document.createElement("p");
-      const pages = document.createElement("p");
-      const checkboxLabel = document.createElement("label");
-      const read = document.createElement("input");
-      const deleteButton = document.createElement("button");
-
       card.classList.add("card");
+      const bookTitle = document.createElement("h2");
       bookTitle.classList.add("book-title");
+      const author = document.createElement("p");
       author.classList.add("author");
+      const pages = document.createElement("p");
       pages.classList.add("pages");
+      const checkboxLabel = document.createElement("label");
       checkboxLabel.htmlFor = book.id;
-      read.classList.add("read");
-      read.type = "checkbox";
-      read.id = book.id;
-      read.checked = book.read;
+      const read = document.createElement("input");
+        read.classList.add("read");
+        read.type = "checkbox";
+        read.id = book.id;
+        read.checked = book.read;
+      const deleteButton = document.createElement("button");
       deleteButton.classList.add("delete-button");
 
-      card.appendChild(bookTitle);
-      card.appendChild(author);
-      card.appendChild(pages);
-      card.appendChild(checkboxLabel);
-      card.appendChild(read);
-      card.appendChild(deleteButton);
+      // add div containers
+      const upperCardFlex = document.createElement("div");
+      upperCardFlex.classList.add("upper-card-flex");
+      const lowerCardFlex = document.createElement("div");
+      lowerCardFlex.classList.add("lower-card-flex");
+      const checkboxField = document.createElement("div");
+      checkboxField.classList.add("checkbox-field");
+      upperCardFlex.appendChild(bookTitle);
+      upperCardFlex.appendChild(author);
+      upperCardFlex.appendChild(pages);
+      checkboxField.appendChild(checkboxLabel);
+      checkboxField.appendChild(read);      
+      lowerCardFlex.appendChild(checkboxField);
+      lowerCardFlex.appendChild(deleteButton);
+
+      card.appendChild(upperCardFlex);
+      card.appendChild(lowerCardFlex);
 
       bookTitle.textContent = book.name;
       author.textContent = book.author;
@@ -118,19 +128,7 @@ addBookToLibrary("Mano", "Fogaça", "23", "yes");
  readLibrary();
 
 // implement this
-//  const upperCardFlex = document.createElement("div");
-//  upperCardFlex.classList.add("upper-card-flex");
-//  const lowerCardFlex = document.createElement("div");
-//  lowerCardFlex.classList.add("lower-card-flex");
-//   const checkboxField = document.createElement("div");
-//  checkboxField.classList.add("checkbox-field");
-//  upperCardFlex.appendChild(bookTitle);
-//  upperCardFlex.appendChild(author);
-//  upperCardFlex.appendChild(pages);
-//  checkboxField.appendChild(checkboxLabel);
-//  checkboxField.appendChild(read);
-//  lowerCardFlex.appendChild(checkboxField);
-//  lowerCardFlex.appendChild(deleteButton);
+
 
  
 
