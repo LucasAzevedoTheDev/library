@@ -82,19 +82,20 @@ closeButton.addEventListener("click", () => {
 
 const submitButton = document.querySelector(".submit");
 submitButton.addEventListener("click", () => {
+  if(!currentName.value === "" || !currentAuthor.value === "" || !currentPages.value === "") {
+    if(theLibrary.length < 10 ) {
+      let currentName = document.querySelector("#name-input").value;
+      let currentAuthor = document.querySelector("#author-input").value;
+      let currentPages = document.querySelector("#pages-input").value;
 
-  if(theLibrary.length < 10) {
-    let currentName = document.querySelector("#name-input").value;
-    let currentAuthor = document.querySelector("#author-input").value;
-    let currentPages = document.querySelector("#pages-input").value;
+      addBookToLibrary(currentName, currentAuthor, currentPages);
+      readLibrary();
+      form.reset();
+    }
 
-    addBookToLibrary(currentName, currentAuthor, currentPages);
-    readLibrary();
-    form.reset();
-  }
-
-  else {
-    alert("Your library is full. Please delete some books to add more.")
+    else {
+      alert("Your library is full. Please delete some books to add more.");
+    }
   }
 })
 
@@ -115,3 +116,21 @@ addBookToLibrary("Manuel", "Fogaça", "23", "yes");
 addBookToLibrary("Manu", "Fogaça", "23", false);
 addBookToLibrary("Mano", "Fogaça", "23", "yes");
  readLibrary();
+
+// implement this
+//  const upperCardFlex = document.createElement("div");
+//  upperCardFlex.classList.add("upper-card-flex");
+//  const lowerCardFlex = document.createElement("div");
+//  lowerCardFlex.classList.add("lower-card-flex");
+//   const checkboxField = document.createElement("div");
+//  checkboxField.classList.add("checkbox-field");
+//  upperCardFlex.appendChild(bookTitle);
+//  upperCardFlex.appendChild(author);
+//  upperCardFlex.appendChild(pages);
+//  checkboxField.appendChild(checkboxLabel);
+//  checkboxField.appendChild(read);
+//  lowerCardFlex.appendChild(checkboxField);
+//  lowerCardFlex.appendChild(deleteButton);
+
+ 
+
