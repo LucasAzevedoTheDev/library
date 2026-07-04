@@ -34,14 +34,23 @@ function readLibrary() {
       const pages = document.createElement("p");
       pages.classList.add("pages");
       const checkboxLabel = document.createElement("label");
+      checkboxLabel.classList.add("read-label");
       checkboxLabel.htmlFor = book.id;
       const read = document.createElement("input");
         read.classList.add("read");
         read.type = "checkbox";
         read.id = book.id;
         read.checked = book.read;
+        
       const deleteButton = document.createElement("button");
       deleteButton.classList.add("delete-button");
+      const deleteIcon = document.createElement("img");
+      deleteIcon.src = "icons/delete.svg";
+      deleteIcon.alt = "delete icon";
+      deleteIcon.classList.add("delete-icon");
+      deleteButton.appendChild(deleteIcon); 
+
+
 
       // add div containers
       const upperCardFlex = document.createElement("div");
@@ -127,7 +136,6 @@ addBookToLibrary("Manu", "Fogaça", "23", false);
 addBookToLibrary("Mano", "Fogaça", "23", "yes");
  readLibrary();
 
-// implement this
 
 
  
