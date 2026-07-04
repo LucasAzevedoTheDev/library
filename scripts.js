@@ -136,8 +136,3 @@ Book.prototype.toggleRead = function() {
     this.read = true;
   }
 };
-
-
-
- 
-
