@@ -100,23 +100,32 @@ closeButton.addEventListener("click", () => {
 });
 
 const submitButton = document.querySelector(".submit");
-submitButton.addEventListener("click", () => {
-  if(!currentName.value === "" || !currentAuthor.value === "" || !currentPages.value === "") {
-    if(theLibrary.length < 10 ) {
-      let currentName = document.querySelector("#name-input").value;
-      let currentAuthor = document.querySelector("#author-input").value;
-      let currentPages = document.querySelector("#pages-input").value;
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
 
-      addBookToLibrary(currentName, currentAuthor, currentPages);
+  let currentName = document.querySelector("#name-input").value;
+  let currentAuthor = document.querySelector("#author-input").value;
+  let currentPages = document.querySelector("#pages-input").value;
+
+  if(currentName !== "" && currentAuthor !== "" && currentPages.value !== "") {
+    if(theLibrary.length < 10 ) {
+      
+
+      addBookToLibrary(currentName, currentAuthor, currentPages, false);
       readLibrary();
+
       form.reset();
+      modal.close();
     }
 
     else {
       alert("Your library is full. Please delete some books to add more.");
     }
   }
-})
+  else {
+    alert("Please fill out all the fields.");
+  }
+});
 
 Book.prototype.toggleRead = function() {
   if(this.read === true) {
