@@ -20,7 +20,7 @@ A fully functional virtual book library application built with Vanilla JavaScrip
 
 ## How to run locally
 
-1. Clone this repository:
+Clone this repository:
    ```bash
    git clone https://github.com/LucasAzevedoTheDev/library.git
 
