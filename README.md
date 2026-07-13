@@ -22,7 +22,7 @@ A fully functional virtual book library application built with Vanilla JavaScrip
 
 1- Clone this repository:
    ```bash
-   git clone https://github.com/LucasAzevedoTheDev/tic-tac-toe 
+   git clone https://github.com/LucasAzevedoTheDev/library.git 
 ```
 2- Open `index.html` in your browser  
 
