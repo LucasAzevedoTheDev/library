@@ -22,7 +22,7 @@ A fully functional virtual book library application built with Vanilla JavaScrip
 
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/LucasAzevedoTheDev/library.git](https://github.com/LucasAzevedoTheDev/library.git)
+   git clone https://github.com/LucasAzevedoTheDev/library.git
 
 ---
 Developed by [Lucas Azevedo](https://github.com/LucasAzevedoTheDev)
